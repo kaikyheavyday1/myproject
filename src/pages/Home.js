@@ -5,26 +5,31 @@ import {
   CarouselControl,
   CarouselIndicators,
   CarouselCaption,
+  Card,
+  CardImg,
+  CardText,
+  CardBody,
+  CardTitle,
+  CardSubtitle,
+  Button,
 } from "reactstrap";
-import bookimg1 from "../images/Home/books1.jpg"
-import bookimg2 from "../images/Home/books2.png"
-import bookimg3 from "../images/Home/books3.jpg"
+
+
+import book1 from "../images/Home/books1.jpg";
+import book2 from "../images/Home/books2.png";
+import book3 from "../images/Home/books3.jpg";
+
+import Producthome from "../component/Producthome";
 
 const items = [
   {
-    src: bookimg1,
-    altText: "Slide 1",
-    caption: "Slide 1",
+    src: book1,
   },
   {
-    src: bookimg2,
-    altText: "Slide 2",
-    caption: "Slide 2",
+    src: book2,
   },
   {
-    src: bookimg3,
-    altText: "Slide 3",
-    caption: "Slide 3",
+    src: book3,
   },
 ];
 export default function Home() {
@@ -63,13 +68,8 @@ export default function Home() {
       </CarouselItem>
     );
   });
-  const [user, setUser] = useState("kaiky");
-  useEffect(() => {
-    console.log(user);
-  }, []);
-
   return (
-    <div className="container">
+    <div className="home container mt-3">
       <Carousel activeIndex={activeIndex} next={next} previous={previous}>
         <CarouselIndicators
           items={items}
@@ -88,6 +88,9 @@ export default function Home() {
           onClickHandler={next}
         />
       </Carousel>
+      <div className="best-seller mt-3">
+          <Producthome />
+      </div>
     </div>
   );
 }

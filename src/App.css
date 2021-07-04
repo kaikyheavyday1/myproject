@@ -1,38 +1,73 @@
 * {
-  font-family: 'Kanit', sans-serif;
+  font-family: "Mitr", sans-serif;
 }
 
 /* navbar */
 
-.header{
-  background-color: #1F363D;
+.header {
+  background-color: #1f363d;
 }
-.header .navbar-brand{
+.header .navbar-brand {
   font-size: 35px;
   font-weight: 400;
-  color : #CFE0C3
+  color: #cfe0c3;
 }
-.header .nav-link{
-  color : #70A9A1;
-  margin-top : 5px;
-  padding-left : 15px !important
+.header .nav-link {
+  margin-top: 5px;
+  padding-left: 15px !important;
 }
-.header .nav-link:hover{
-  color : #eee;
+.header .nav-link a {
+  color: #70a9a1;
+  text-decoration: none;
 }
-.header button{
+.header .nav-link:hover {
+  color: #eee;
+}
+.header .button-login {
   padding: 7px 10px;
   border-radius: 10px;
-  border : 1px solid #40798C;
-  color : #70A9A1;
+  border: 1px solid #40798c;
+  color: #70a9a1;
 }
-.header button:hover{
-  background-color: #9EC1A3;
+.header .button-login:hover {
+  background-color: #9ec1a3;
   color: #000;
 }
 
 /* home */
-.carousel-item img{
+.carousel-item img {
   height: 400px !important;
   width: 100%;
+}
+
+/* login */
+.login .in-login {
+  padding: 50px;
+  background-color: #fff;
+  border-radius: 20px;
+  color: #1f363d;
+  border: 2px solid #40798c;
+}
+.login .in-login h1 {
+  font-weight: bold;
+  font-size: 30px;
+}
+.login input {
+  border-radius: 10px;
+}
+.login button {
+  border: none;
+  background-color: #40798c;
+  color: #fff;
+  font-size: 25px;
+  padding: 5px 15px;
+  border-radius: 10px;
+}
+.login button:hover {
+  border: 1px solid #40798c;
+  background-color: #fff;
+  color: #40798c;
+}
+.login a {
+  color: #40798c;
 }
