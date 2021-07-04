@@ -33,13 +33,23 @@
   background-color: #9ec1a3;
   color: #000;
 }
+.header .dropdown-item a{
+  color: #70a9a1;
+  text-decoration: none;
+}
 
 /* home */
 .carousel-item img {
   height: 400px !important;
   width: 100%;
 }
-
+.home a{
+  color: #70a9a1;
+  text-decoration: none;
+}
+.home .row .card-title{
+  font-size: 18px !important;
+}
 /* login */
 .login .in-login {
   padding: 50px;
@@ -71,3 +81,72 @@
 .login a {
   color: #40798c;
 }
+/* register */
+.register .register-field{
+  padding: 50px;
+  background-color: #fff;
+  border-radius: 20px;
+  color: #1f363d;
+  border: 2px solid #40798c;
+  color : #1f363d;
+}
+.register button{
+  border: none;
+  background-color: #40798c;
+  color: #fff;
+  font-size: 25px;
+  padding: 5px 15px;
+  border-radius: 10px;
+}
+.register button:hover{
+  border: 1px solid #40798c;
+  background-color: #fff;
+  color: #40798c;
+}
+/* discountproductt */
+.discountproduct a{
+  color : #70a9a1;
+  text-decoration: none;
+}
+.topproduct a {
+  color : #70a9a1;
+  text-decoration: none;
+}
+.yourproduct .card-body{
+  color : #70a9a1;
+}
+.yourproduct .edit-button button{
+  border: none;
+  background-color: #40798c;
+  color: #fff;
+  font-size: 15px;
+  padding: 5px 15px;
+  border-radius: 10px;
+}
+.yourproduct .edit-button button:hover{
+  border: 1px solid #40798c;
+  background-color: #fff;
+  color: #40798c;
+}
+
+.editproduct .edit, .editproduct .vis{
+  margin-right: 12px;
+}
+.cart .title{
+  background-color: #1f363d;
+ color: #70a9a1;
+ padding-top: 15px;
+ padding-bottom: 15px;
+padding-left: 10px;
+}
+.cart .cart-field{
+  border : 1px solid #40798c;
+  padding-left :25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 25px;
+}
+.cart #delete{
+  margin-right: 10px;
+}
+

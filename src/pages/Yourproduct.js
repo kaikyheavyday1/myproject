@@ -37,7 +37,7 @@ export default function Yourproduct() {
           {products.length > 0 &&
             products.map((products, index) => {
               return (
-                <div className="col-3">
+                <div className="col-lg-2 col-md-3 col-sm-6 col-6">
                   <Card>
                     <Link to={`/product/${products.id}`}>
                       <CardImg
@@ -50,13 +50,19 @@ export default function Yourproduct() {
                     <CardBody>
                       <CardTitle tag="h5">{products.name}</CardTitle>
                       <CardText>{products.price} บาท</CardText>
+                      <CardText>{products.status === 2 && "ปิดการมองเห็นอยู่"}</CardText>
                       <StarRatings
                         rating={products.rating}
-                        starDimension="25px"
+                        starDimension="15px"
                         starSpacing="2px"
                         starRatedColor="#40798C"
                       />
                     </CardBody>
+                    <div className="text-center edit-button">
+                      <Link to={`editproduct/${products.id}`}>
+                        <button>แก้ไข</button>
+                      </Link>
+                    </div>
                   </Card>
                 </div>
               );

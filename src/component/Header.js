@@ -78,12 +78,12 @@ export default function Header() {
             <Nav className="mr-auto" navbar>
               <NavItem>
                 <NavLink>
-                  <Link to="/topproduct">สินค้าลดราคา</Link>
+                  <Link to="/discountproduct">สินค้าลดราคา</Link>
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink>
-                  <Link to="/discountproduct">สินค้าแนะนำ</Link>
+                  <Link to="/topproduct">สินค้าแนะนำ</Link>
                 </NavLink>
               </NavItem>
             </Nav>

@@ -87,8 +87,8 @@ export default function Editproduct(props) {
               </div>
             );
           })}
-        <div>
-          <button onClick={handleEditSubmit}>แก้ไขสินค้า</button>
+        <div className="d-flex justify-content-end">
+          <button className="btn btn-warning edit" onClick={handleEditSubmit}>แก้ไขสินค้า</button>
           <Editvision productID = {productID} product= {product}/>
           <Deleteproduct productID = {productID} />
         </div>

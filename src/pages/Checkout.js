@@ -57,8 +57,7 @@ export default function Checkout() {
     }
   };
   return (
-    <div className="cart container">
-      {console.log(payment)}
+    <div className="checkout container">
       <div className="row mt-5">
         <div className="col-8">
           <div>
@@ -177,24 +176,26 @@ export default function Checkout() {
                 <option value="debit/credit">บัตรเครดิต/เดบิต</option>
               </select>
             </div>
-            <div className="mt-5">
-              <button onClick={handleButtonSubmit}>ชำระเงิน</button>
+            <div className="mt-3 text-end mb-4">
+              <button className="btn btn-success btn-lg" onClick={handleButtonSubmit}>ชำระเงิน</button>
             </div>
           </div>
         </div>
         <div className="col-4 mt-5">
-          <h4>สรุปคำสั่งซื้อ</h4>
+          <div className="title"><h4>สรุปคำสั่งซื้อ</h4></div>
+          
           {cart.length > 0 &&
             cart.map((cart, index) => {
               return (
-                <div className="d-flex justify-content-between">
-                  <img src={cart.pic} height="50px" />
-                  <p>{cart.name}</p>
-                  <p>{cart.price} บาท</p>
+                <div className="row mt-3">
+                  <div className="col-3"><img src={cart.pic} className="w-100" /></div>
+                  <div className="col-6"><p>{cart.name}</p></div>
+                  <div className="col-3"><p>{cart.price} บาท</p></div>
+                  
                 </div>
               );
             })}
-          <h5>รวมราคาทั้งหมด : {price !== undefined && price} บาท</h5>
+          <h5 className="mt-3">รวมราคาทั้งหมด : {price !== undefined && price} บาท</h5>
         </div>
       </div>
     </div>

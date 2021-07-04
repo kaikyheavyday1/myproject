@@ -52,28 +52,49 @@ export default function Cart() {
     }
   };
   return (
-    <div className="cart container">
-      <h1>your cart</h1>
-      {cart.length > 0 &&
-        cart.map((cart, index) => {
-          return (
-            <div className="d-flex justify-content-between">
-              <img src={cart.pic} height="100px" />
-              <h4>{cart.name}</h4>
-              <h4>{cart.price}</h4>
-              <div>
-                <button onClick={deletecart} id={cart.id}>
-                  ลบ
-                </button>
+    <div className="cart container mt-5">
+      <div className="title">
+        <h3>ตะกร้ารถเข็นของคุณ</h3>
+      </div>
+      <div className="cart-field">
+        {cart.length > 0 &&
+          cart.map((cart, index) => {
+            return (
+              <div className="row incart pt-3">
+                <div className="col-3">
+                  <img src={cart.pic} height="100px" />
+                </div>
+                <div className="col-3">
+                  <h4>{cart.name}</h4>
+                </div>
+                <div className="col-3 text-center">
+                  <h4>{cart.price} บาท</h4>
+                </div>
+                <div className="col-3 text-center">
+                  <button
+                    className="btn btn-danger"
+                    onClick={deletecart}
+                    id={cart.id}
+                  >
+                    ลบ
+                  </button>
+                </div>
+                <hr className="mt-2"></hr>
               </div>
-            </div>
-          );
-        })}
-      <h3>{price !== undefined && price}</h3>
-      <button onClick={deleteallcart}>ล้างตะกร้าสินค้า</button>
-      <Link to="/checkout">
-        <button>ชำระเงิน</button>
-      </Link>
+            );
+          })}
+      </div>
+      <div className="d-flex justify-content-between pt-3 sumfield">
+        <h3>
+          รวมราคาทั้งหมด : {price !== undefined && price} บาท
+        </h3>
+        <div>
+          <button onClick={deleteallcart} className="btn btn-danger" id="delete">ล้างตะกร้าสินค้า</button>
+          <Link to="/checkout">
+            <button className="btn btn-primary">ชำระเงิน</button>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

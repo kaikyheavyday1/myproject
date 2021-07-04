@@ -17,38 +17,41 @@ export default function Discountproduct() {
     getProduct();
   }, []);
   const getProduct = async () => {
-    const fetch = await axios.get("http://localhost:4000/products/list?list=discount");
+    const fetch = await axios.get(
+      "http://localhost:4000/products/list?list=discount"
+    );
     const data = await fetch.data;
     setProducts(data);
   };
   return (
-    <div className="container">
-      <h1>Topproduct</h1>
+    <div className="discountproduct container">
+      <h1 className="mt-5">สินค้าลดราคา</h1>
       <div className="row">
         {products.length > 0 &&
           products.map((products, index) => {
             return (
-              <div className="col-3">
-                <Card>
-                  <Link to={`/product/${products.id}`}>
+              <div className="col-lg-2 col-md-3 col-sm-6 col-6">
+                <Link to={`/product/${products.id}`}>
+                  <Card>
                     <CardImg
                       top
                       width="100%"
                       src={products.pic}
                       alt="Card image cap"
                     />
-                  </Link>
-                  <CardBody>
+
+                    <CardBody>
                       <CardTitle tag="h5">{products.name}</CardTitle>
                       <CardText>{products.price} บาท</CardText>
                       <StarRatings
                         rating={products.rating}
-                        starDimension="25px"
+                        starDimension="15px"
                         starSpacing="2px"
-                        starRatedColor ="#40798C"
+                        starRatedColor="#40798C"
                       />
                     </CardBody>
-                </Card>
+                  </Card>
+                </Link>
               </div>
             );
           })}

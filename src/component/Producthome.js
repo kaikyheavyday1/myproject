@@ -25,11 +25,11 @@ export default function Producthome() {
   return (
     <div>
       <h3>สินค้าทั้งหมด</h3>
-      <div className="row">
+      <div className="row mt-3">
         {products.length > 0 &&
           products.map((products, index) => {
             return (
-              <div className="col-3">
+              <div className="col-lg-2 col-md-3 col-sm-6 col-6">
                 <Link to={`/product/${products.id}`}>
                   <Card>
                     <CardImg
@@ -43,7 +43,7 @@ export default function Producthome() {
                       <CardText>{products.price} บาท</CardText>
                       <StarRatings
                         rating={products.rating}
-                        starDimension="25px"
+                        starDimension="15px"
                         starSpacing="2px"
                         starRatedColor ="#40798C"
                       />

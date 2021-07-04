@@ -33,11 +33,11 @@ export default function Editvision(props) {
         product.map((product, index) => {
           if (product.status === 2) {
             return (
-              <button onClick={handleVisionOn}>เปิดการมองเห็นสินค้า</button>
+              <button className ="btn btn-info vis" onClick={handleVisionOn}>เปิดการมองเห็นสินค้า</button>
             );
           } else {
             return (
-              <button onClick={handleVisionOff}>ปิดการมองเห็นสินค้า</button>
+              <button className ="btn btn-info vis" onClick={handleVisionOff}>ปิดการมองเห็นสินค้า</button>
             );
           }
         })}

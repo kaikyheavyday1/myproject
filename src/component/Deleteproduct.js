@@ -28,7 +28,7 @@ export default function Deleteproduct(props) {
   };
   return (
     <div>
-      <button onClick={handleButtonSubmit}>ลบสินค้าของคุณ</button>
+      <button className="btn btn-danger" onClick={handleButtonSubmit}>ลบสินค้าของคุณ</button>
     </div>
   );
 }

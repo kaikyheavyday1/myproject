@@ -148,7 +148,7 @@ export default function Postproduct() {
         </div>
         <div className="mt-5 text-center">
           <h4 style={{ color: "red" }}>{error ? error : ""}</h4>
-          <button type="button" onClick={handleButtonSubmit} className="mb-3">
+          <button type="button" onClick={handleButtonSubmit} className="mb-3 btn btn-success">
             ลงสินค้า
           </button>
         </div>
