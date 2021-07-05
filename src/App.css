@@ -149,4 +149,12 @@ padding-left: 10px;
 .cart #delete{
   margin-right: 10px;
 }
-
+.product .cart-button{
+  margin-left: 20px;
+}
+.product span{
+  color: #70A9A1;
+}
+.product{
+  color : #1F363D;
+}

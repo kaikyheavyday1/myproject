@@ -23,14 +23,8 @@ export default function Addrating(props) {
     alert(data)
   };
   return (
-    <div className="d-flex justify-content-around">
-      <StarRatings
-        rating={rating}
-        starDimension="25px"
-        starSpacing="2px"
-        starRatedColor="#40798C"
-      />
-      <Button color="danger" onClick={toggle}>
+    <div className="rating-field">
+      <Button color="warning" classname ="button addrating" onClick={toggle}>
         ให้เรตติ้งสินค้า
       </Button>
       <Modal isOpen={modal} toggle={toggle}>

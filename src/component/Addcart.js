@@ -18,8 +18,8 @@ export default function Addcart(props) {
     }
   };
   return (
-    <div>
-      <button onClick={addcart}>Add</button>
+    <div className="text-end cart-button">
+      <button className = "btn btn-primary" onClick={addcart}>ใส่สินค้าลงตะกร้า</button>
     </div>
   );
 }
